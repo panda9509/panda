@@ -1,0 +1,117 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.full {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.full img{
+    width: 100%; /* 画像の幅を画面の幅に合わせる */
+    height: auto; /* アスペクト比を保持しつつ幅が変わるようにする */
+    max-width: 100%; /* 最大幅を画面の幅に合わせる */
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: flexed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* 水平方向の中央揃え */
+    align-items: center;
+}
+    
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 200px;
+    /*margin-right: 370px;*/
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px; /* 上下の余白を10pxに設定 */
+}
+
+.bbb,
+.aaa {
+    display: flex;
+    /*margin-right: 370px; /* ボタンを右端に移動 */
+}
+
+.bbb .ccc:last-child,
+.aaa .ccc:first-child{
+    margin-right: 0;
+}
+
+.ccc {
+    padding:10px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    margin-top: 0px;
+}
+
+.main-content {
+    margin-top: 100px; /* Adjust according to header height */
+    text-align: center;
+}
+
+.main-content img {
+    max-width: 100%;
+}
+
+.season-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -7,12 +7,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: rgb(255,255,255);
+    margin-top: 78px;
+    margin-bottom: 70px;
 }
 
 .full {
     position: relative;
-    margin-top: 38px;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -20,12 +21,13 @@ body {
 
 .full img{
     width: 100%; /* 画像の幅を画面の幅に合わせる */
-    height: auto; /* アスペクト比を保持しつつ幅が変わるようにする */
-    max-width: 100%; /* 最大幅を画面の幅に合わせる */
+    height: 100%; /* アスペクト比を保持しつつ幅が変わるようにする */
+    /*max-width: 100%; 最大幅を画面の幅に合わせる */
+    object-fit: cover;
 }
 
 header {
-    background-color: #f2f2f2;
+    /* background-color: rgba(242,242,242,0.8);
     padding: 20px;
     position: flexed;
     width: 100%;
@@ -33,8 +35,8 @@ header {
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* 水平方向の中央揃え */
-    align-items: center;
+    justify-content: space-between;  水平方向の中央揃え 
+    align-items: center; */
 }
     
 .logo {
@@ -47,13 +49,12 @@ header {
 }
 
 nav {
-    background-color: #f2f2f2;
+    background-color: rgba(242,242,242,0.8);
     padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +79,7 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    padding: 10px; /* 上下の余白を10pxに設定 */
+    padding: 20px; /* 上下の余白を10pxに設定 */
 }
 
 nav .left-buttons,
@@ -111,12 +112,13 @@ nav .right-buttons {
 }
 
 .main-content {
-    margin-top: 100px; /* Adjust according to header height */
+    margin-top: 0px; /* Adjust according to header height */
     text-align: center;
 }
 
 .main-content img {
     max-width: 100%;
+    height: auto;
 }
 
 .season-btn {
@@ -138,4 +140,27 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-buttons {
+    position: flex;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+}
+
+.image-buttons img {
+    margin: 2.5px;
+    width: 49.5%; /* 画像の幅を画面の幅に合わせる */
+    height: 100%; /* アスペクト比を保持しつつ幅が変わるようにする */
+    /*max-width: 100%; 最大幅を画面の幅に合わせる */
+    object-fit: cover;
 }

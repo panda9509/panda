@@ -157,10 +157,46 @@ footer {
     margin-top: 10px;
 }
 
+
 .image-buttons img {
     margin: 2.5px;
-    width: 49.5%; /* 画像の幅を画面の幅に合わせる */
+    width: 100%; /* 画像の幅を画面の幅に合わせる */
     height: 100%; /* アスペクト比を保持しつつ幅が変わるようにする */
     /*max-width: 100%; 最大幅を画面の幅に合わせる */
     object-fit: cover;
+}
+
+.button-overlay1, .button-overlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    padding: 10px 20px;
+    background-color: rgba(242, 242, 242, 0.5); /* ボタンの背景色 */
+    color: #fff; /* ボタンの文字色 */
+    border: 5px solid transparent; /* ボタンの枠線 */
+    border-radius: 0px; /* ボタンの角丸 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ボタンの影 */
+    overflow: hidden; /* 枠線の外部を隠す */
+}
+
+.image-button:hover .button-overlay1, .image-button:hover .button-overlay2 {
+    border-color: #fff; /* ホバー時の枠線の色 */
+    animation: pulse 1s infinite alternate; /* アニメーションの適用 */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.image-button {
+    display: inline-block;
+    position: relative; /* 相対位置指定 */
+    margin: 0 10px; /* ボタンの間隔 */
 }

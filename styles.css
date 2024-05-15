@@ -137,7 +137,6 @@ footer {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px; /* 画像間の間隔 */
 }
 
 .image-button {
@@ -147,9 +146,8 @@ footer {
 }
 
 .image-button img {
-    margin-left: 10px;
-    width: 100%;
-    height: auto;
+    width: 97%;
+    height: 100%;
 }
 
 .button-overlay {
@@ -182,4 +180,3 @@ footer {
         transform: translate(-50%, -50%) scale(1.1);
     }
 }
-

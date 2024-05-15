@@ -159,7 +159,7 @@ footer {
 
 
 .image-buttons img {
-    margin: 2.5px;
+    margin-left: 10px;
     width: 100%; /* 画像の幅を画面の幅に合わせる */
     height: 100%; /* アスペクト比を保持しつつ幅が変わるようにする */
     /*max-width: 100%; 最大幅を画面の幅に合わせる */

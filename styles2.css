@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('back.jpg');
+    background-image: url('back.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -15,13 +15,13 @@ body {
 
     font-family: Arial, sans-serif;
     background-color: rgb(255,255,255);
-    margin-top: 78px;
     margin-bottom: 70px;
 }
 
 .full {
     position: relative;
     height: 100vh;
+    margin-top: 78px;
     background-size: cover;
     background-position: center;
 }
@@ -57,7 +57,7 @@ header {
 
 nav {
     background-color: rgba(242,242,242,0.8);
-    padding: 20px;
+    padding: 20.5px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -129,8 +129,8 @@ nav .right-buttons {
 }
 
 .text-container{
-    margin: 20px 0;
-    margin-bottom: -7px;
+    margin: 10px 0;
+    margin-bottom: 0px;
 }
 
 .season-btn {
@@ -157,7 +157,7 @@ footer {
 
 
 .button-container {
-    margin-top: 20px;
+    margin-top: 0px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -215,6 +215,7 @@ footer {
     display: block;
     width: 130px;
     margin: 20px auto;
+    margin-top: 100px;
     padding: 10px 20px;
     background-color: #ffffff;
     color: #000000;
@@ -245,7 +246,7 @@ footer {
 
 .trans {
     background-color: rgba(255, 255, 255, 0);
-    padding: 150px;
+    padding: 50px;
     border-radius: 10px;
     /* background: none; コンタクト情報セクションの背景を透明に */
     background: transparent !important;
@@ -253,6 +254,6 @@ footer {
 
 .brown {
     background-color: #ffffff; /* 茶色っぽい色 */
-    padding: 10px; /* コンテンツにパディングを追加 */
+    padding: 0.1px; /* コンテンツにパディングを追加 */
     text-align: center; /* テキストを中央揃えに */
 }

@@ -6,26 +6,35 @@
 }
 
 body {
+    /* background-image: url('back.png'); */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+
+
     font-family: Arial, sans-serif;
     background-color: rgb(255,255,255);
-    margin-top: 78px;
     margin-bottom: 70px;
 }
 
 .full {
     position: relative;
     height: 100vh;
+    margin-top: 78px;
     background-size: cover;
     background-position: center;
 }
 
 .full img{
-    width: 100%; /* 画像の幅を画面の幅に合わせる */
-    height: 100%; /* アスペクト比を保持しつつ幅が変わるようにする */
+    width: 100%; 
+    height: 100%; 
+    max-width: 100%; 
     object-fit: cover;
 }
 
 header {
+    z-index: 1000;
     /* background-color: rgba(242,242,242,0.8);
     padding: 20px;
     position: fixed;
@@ -48,7 +57,7 @@ header {
 
 nav {
     background-color: rgba(242,242,242,0.8);
-    padding: 20px;
+    padding: 20.5px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -78,14 +87,13 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    padding: 20px; /* 上下の余白を10pxに設定 */
+    padding: 20px; 
 }
 
 nav .left-buttons,
 nav .right-buttons {
     display: flex;
     align-items: center;
-    /*margin-right: 370px; ボタンを右端に移動 */
 }
 
 nav .left-buttons {
@@ -94,28 +102,42 @@ nav .left-buttons {
 
 nav .right-buttons {
     margin-left: auto;
+} 
+
+.left-buttons .ccc:last-child,
+.right-buttons .ccc:first-child{
+    margin-right: 0;
 }
 
+.ccc {
+    padding:10px 0px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    margin-top: 0px;
+}
 
 .main-content {
-    margin-top: 0px; /* Adjust according to header height */
+    margin-top: 0px; 
     text-align: center;
 }
 
 .main-content img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .text-container{
-    margin: 1000px 0;
+    margin: 10px 0;
+    margin-bottom: 0px;
 }
 
 .season-btn {
     display: block;
     width: 200px;
-    margin: 20px auto;
-    padding: 10px 20px;
+    margin: 0px 0px;
+    padding: 0px 0px;
     background-color: #333;
     color: #fff;
     text-decoration: none;
@@ -126,57 +148,112 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 24px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
 
+
 .button-container {
-    margin-top: 20px;
+    margin-top: -0.5px;
+    position: relative;
     display: flex;
     justify-content: center;
+    gap: 24px; 
 }
 
 .image-button {
     position: relative;
-    width: 100%;  
+    width: 48%;  
     height: 100%;
+    padding: 0 0;
 }
 
 .image-button img {
-    width: 97%;
+    width: 100%;
     height: 100%;
 }
 
-.button-overlay {
+.image-button .button-overlay {
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
+    width: 150px;
+    height: 50px;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3s ease, border-color 0.3s ease;
-    padding: 10px 20px;
-    background-color: rgba(242, 242, 242, 0.5); /* ボタンの背景色 */
-    color: #fff; /* ボタンの文字色 */
-    border: 3px solid transparent; /* ボタンの枠線 */
-    border-radius: 0px; /* ボタンの角丸 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ボタンの影 */
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    border: 2px solid transparent; 
+    border-radius: 0px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     text-align: center;
 }
 
 .image-button:hover .button-overlay {
     opacity: 1;
-    border-color: #fff; /* ホバー時の枠線の色 */
-    animation: pulse 1s infinite alternate; /* アニメーションの適用 */
+    border-color: #fff; 
+    animation: pulse 0.5s 1; 
 }
 
 @keyframes pulse {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(0.8);
     }
     100% {
-        transform: translate(-50%, -50%) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.0);
     }
+}
+
+
+.season-btn {
+    display: block;
+    width: 130px;
+    margin: 20px auto;
+    margin-top: 100px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.season-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.season-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.trans {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 40px;
+    border-radius: 10px;
+    /* background: none; コンタクト情報セクションの背景を透明に */
+    background: transparent !important;
+}
+
+.brown {
+    background-color: #ffffff; /* 茶色っぽい色 */
+    padding: 0.1px; /* コンテンツにパディングを追加 */
+    text-align: center; /* テキストを中央揃えに */
 }

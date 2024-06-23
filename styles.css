@@ -314,3 +314,10 @@ footer {
     padding: 0.1px; /* コンテンツにパディングを追加 */
     text-align: center; /* テキストを中央揃えに */
 }
+
+.browns {
+    margin-top: 280px;
+    background-color: #ffffff; /* 茶色っぽい色 */
+    padding: 0.1px; /* コンテンツにパディングを追加 */
+    text-align: center; /* テキストを中央揃えに */
+}

@@ -171,36 +171,37 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 95%;
     margin-top: -40px;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
 
 .update-title {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 0px;
 }
 
 .update-description {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 
 .footer-content .left-content {
     max-width: 50%;
-    margin-left: 160px;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 .footer-content .right-content {
-    margin-top: -30px;
-    margin-right: 220px;
+    margin-top: -10px;
+    margin-right: 0px;
     display: flex;
-    gap: 0px;
+    gap: 10px;
 }
 
 .footer-content .right-content img {
-    width: 120px; /* Adjust size as needed */
-    height: auto;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
 }
 
 
